@@ -1,0 +1,8 @@
+.DS_Store
+
+# Captured credentials - never commit
+**/login_data.txt
+**/captured_credentials.txt
+
+# Environment files
+.env
