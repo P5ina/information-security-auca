@@ -1,0 +1,23 @@
+# Lab 7 — Crontab configuration
+#
+# Format: minute hour day month weekday command
+# ┌───── minute (0-59)
+# │ ┌─── hour (0-23)
+# │ │ ┌─ day of month (1-31)
+# │ │ │ ┌ month (1-12)
+# │ │ │ │ ┌ day of week (0-6, Sun=0)
+# │ │ │ │ │
+# * * * * *  command
+
+# Run monitor.py every hour and log output
+0 * * * * python3 /path/to/lab7/monitor.py >> /tmp/monitor.log 2>&1
+
+# Run at system startup
+@reboot python3 /path/to/lab7/monitor.py >> /tmp/monitor.log 2>&1
+
+# Run every day at 9:00 AM
+0 9 * * * python3 /path/to/lab7/monitor.py >> /tmp/monitor.log 2>&1
+
+# To install: crontab crontab.txt
+# To verify:  crontab -l
+# To remove:  crontab -r
