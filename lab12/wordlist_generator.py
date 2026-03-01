@@ -11,7 +11,7 @@ import sys
 
 def generate_wordlist(first: str, last: str, dob: str) -> list[str]:
     """
-    dob format: DDMMYYYY  e.g. 24072005
+    dob format: DDMMYYYY  e.g. 01011990
     """
     f = first.lower()
     l = last.lower()
